@@ -4,54 +4,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My Random Web Page</title>
+    <title>Bruno Malarini Elgoyhen</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
             margin: 0;
             padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
         }
-        header {
-            background-color: #4CAF50;
-            color: white;
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
             text-align: center;
-            padding: 10px;
-        }
-        main {
-            padding: 20px;
-        }
-        h1 {
-            font-size: 36px;
-        }
-        p {
-            font-size: 18px;
-            line-height: 1.6;
-        }
-        footer {
-            background-color: #4CAF50;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
+            max-width: 1000px;
             width: 100%;
-            bottom: 0;
+        }
+        .text-content {
+            flex: 1;
+        }
+        .text-content h1 {
+            font-size: 36px;
+            margin: 10px 0;
+        }
+        .text-content p {
+            font-size: 20px;
+            margin: 10px 0;
+        }
+        .text-content a {
+            text-decoration: none;
+            color: #4CAF50;
+            font-size: 18px;
+            margin: 5px;
+        }
+        .text-content a:hover {
+            text-decoration: underline;
+        }
+        .photo {
+            max-width: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .cv-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .cv-button:hover {
+            background-color: #45a049;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Grubi Puto!</h1>
-    </header>
 
-    <main>
-        <p>This is a basic example of a random webpage with HTML and CSS. You can add more content and style as needed.</p>
-        <p>Have fun experimenting!</p>
-    </main>
+    <div class="container">
+        <!-- Left side: Text content -->
+        <div class="text-content">
+            <h1>Hi there!</h1>
+            <p>I'm Bruno Malarini Elgoyhen</p>
+            <p>Data Engineer | [Other Titles]</p>
 
-    <footer>
-        <p>&copy; 2025 My Random Website</p>
-    </footer>
+            <!-- Links to GitHub, LinkedIn -->
+            <div>
+                <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
+            </div>
+
+            <!-- CV download button -->
+            <a href="path/to/your-cv.pdf" download>
+                <button class="cv-button">Download CV</button>
+            </a>
+        </div>
+
+        <!-- Right side: Photo -->
+        <div>
+            <img src="path/to/your-photo.jpg" alt="Bruno Malarini Elgoyhen" class="photo">
+        </div>
+    </div>
+
 </body>
 </html>
