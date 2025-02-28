@@ -14,8 +14,8 @@ body {
 .landing-container {
     text-align: center;
     display: flex;
-    justify-content: flex-start;  /* Aligns items to the start (left) */
-    align-items: flex-start;  /* Aligns items to the top */
+    /* justify-content: flex-start;  /* Aligns items to the start (left) */
+    /* align-items: flex-start;  /* Aligns items to the top */
     width: 80%;
 }
 .text-content {
