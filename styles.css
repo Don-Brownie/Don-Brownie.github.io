@@ -102,12 +102,8 @@ body {
 /* Photo styling */
 .photo {
     max-width: 200px;
-    border-radius: 8px;
-    object-fit: contain; /* Adjusted from scale-down */
-    position: absolute;
-    top: 50%;
-    left: 10px;
-    transform: translateY(-50%); /* Centers the image vertically */
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 /* Keyframes for caret blinking */
