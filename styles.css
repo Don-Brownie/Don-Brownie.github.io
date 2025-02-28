@@ -101,6 +101,9 @@ body {
 
 /* Photo styling */
 .photo {
+    max-width: 200px;
+    border-radius: 8px;
+    object-fit: cover;
     position: absolute;
     top: 50%;
     left: 10px;  /* Place it on the left side */
