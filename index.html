@@ -41,7 +41,7 @@
     
     <script>
         // JavaScript code remains the same
-        const roles = ["Data Engineer", "Software Developer", "Tech Enthusiast", "AI Researcher", "Web Developer"];
+        const roles = ["Data Analyst", "Data Engineer", "Project Manager", "Policy Designer", "Political Scientist"];
         let roleIndex = 0;
         let currentText = '';
         let isErasing = false;
@@ -50,7 +50,7 @@
         const erasingSpeed = 50;
         const pauseTime = 1000;
         const roleElement = document.getElementById('role');
-
+        
         function typeRole() {
             const currentRole = roles[roleIndex];
             if (isErasing) {
@@ -60,9 +60,9 @@
                 currentText = currentRole.substring(0, charIndex);
                 charIndex++;
             }
-
+        
             roleElement.textContent = currentText;
-
+        
             if (!isErasing && charIndex === currentRole.length) {
                 setTimeout(() => {
                     isErasing = true;
@@ -73,12 +73,13 @@
                 setTimeout(typeRole, pauseTime);
                 return;
             }
-
+        
             const speed = isErasing ? erasingSpeed : typingSpeed;
             setTimeout(typeRole, speed);
         }
-
+        
         typeRole();
+
     </script>
 </body>
 </html>
