@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Bruno Malarini Elgoyhen</title>
+    
+    <!-- CSS styles go here -->
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -17,50 +19,34 @@
             background-color: #f4f4f4;
         }
         .container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 20px;
             text-align: center;
-            max-width: 1000px;
-            width: 100%;
-        }
-        .text-content {
-            flex: 1;
         }
         .text-content h1 {
             font-size: 36px;
             margin: 10px 0;
         }
-        .text-content p {
-            font-size: 20px;
-            margin: 10px 0;
-        }
-        .text-content a {
-            text-decoration: none;
+        .rotating-titles {
+            font-size: 32px;
+            font-weight: bold;
             color: #4CAF50;
-            font-size: 18px;
-            margin: 5px;
-        }
-        .text-content a:hover {
-            text-decoration: underline;
+            white-space: nowrap;
+            display: inline-block;
+            border-right: 2px solid #4CAF50; /* Creates the caret effect */
+            padding-right: 5px; /* Space between text and caret */
+            animation: blinkCaret 0.7s step-end infinite; /* Blinking animation */
         }
         .photo {
             max-width: 200px;
             border-radius: 50%;
             object-fit: cover;
-        }
-        .cv-button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            font-size: 18px;
-            border: none;
-            cursor: pointer;
             margin-top: 20px;
         }
-        .cv-button:hover {
-            background-color: #45a049;
+
+        /* Keyframes for caret blinking */
+        @keyframes blinkCaret {
+            50% {
+                border-color: transparent; /* Makes the caret disappear */
+            }
         }
     </style>
 </head>
@@ -94,13 +80,14 @@
     </div>
     
   <script>
+        // JavaScript code remains the same
         const roles = ["Data Engineer", "Software Developer", "Tech Enthusiast", "AI Researcher", "Web Developer"];
         let roleIndex = 0;
         let currentText = '';
         let isErasing = false;
         let charIndex = 0;
-        const typingSpeed = 500;
-        const erasingSpeed = 600;
+        const typingSpeed = 60;
+        const erasingSpeed = 50;
         const pauseTime = 1000;
         const roleElement = document.getElementById('role');
 
