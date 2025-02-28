@@ -16,7 +16,7 @@
         <div class="text-content">
             <h1>Hi there!</h1>
             <p>I'm Bruno Malarini Elgoyhen</p>
-            <div class = "rotating-titles-full-text">
+            <div class="rotating-titles-full-text">
                 <p>I'm a <span class="rotating-titles" id="role"></span></p>
             </div>
             
@@ -28,21 +28,54 @@
                 <a href="https://www.linkedin.com/in/brunomalarinielgoyhen/" target="_blank" class="link">
                     <img src="https://github.com/Don-Brownie/Don-Brownie.github.io/blob/main/Imagenes/linkedin_logo.png?raw=true" alt="LinkedIn" class="social-icon">
                 </a>
-                 <!-- CV download button -->
-            <a href="Archivos/curriculum_vitae.pdf" download>
-                <button class="cv-button">Download CV</button>
-            </a>
+                <!-- CV download button -->
+                <a href="Archivos/curriculum_vitae.pdf" download>
+                    <button class="cv-button">Download CV</button>
+                </a>
             </div>
-            <div class = "descripcion-bruno-texto">
-                <p> Specialized in data visualization and presentation, with a passion for identifying the ideal tools to address each unique solution. Skilled in aligning stakeholder priorities and fostering collaboration. Hands-on experience in shaping technological and educational policies, as well as in DevOps, ETL processes, API integration, AWS, and SQL, ensuring seamless and efficient system operations. Also a sailor, actor, tango dancer and dog lover.
-                </p>    
+            <div class="descripcion-bruno-texto">
+                <p>Specialized in data visualization and presentation, with a passion for identifying the ideal tools to address each unique solution. Skilled in aligning stakeholder priorities and fostering collaboration. Hands-on experience in shaping technological and educational policies, as well as in DevOps, ETL processes, API integration, AWS, and SQL, ensuring seamless and efficient system operations. Also a sailor, actor, tango dancer and dog lover.</p>
+            </div>
         </div>
 
-            </div>
         <!-- Right side: Photo -->
-            <img src="https://github.com/Don-Brownie/Don-Brownie.github.io/blob/main/Imagenes/foto_perfil.jpeg?raw=true" alt="Bruno Malarini Elgoyhen" class="photo">
+        <img src="https://github.com/Don-Brownie/Don-Brownie.github.io/blob/main/Imagenes/foto_perfil.jpeg?raw=true" alt="Bruno Malarini Elgoyhen" class="photo">
+    </div>  
+        <!-- Service Example Box -->
+        <div class="service-examples">
+            <div class="index-boxes">
+                <div class="inner-boxes" id="data-visual">
+                    <img src="https://github.com/Don-Brownie/Don-Brownie.github.io/blob/main/Imagenes/linkedin_logo.png?raw=true" alt="data-visual" class="logo">
+                    <div class="inner-boxes-title">
+                        <h3> Titulo</h3>
+                        </div>
+                        <div class="inner-boxes-text">
+                        <p> textito lindo </p>
+                        </div>
+                    <div class="icon-holder-list" id="data-visual">
+                        <img src="https://github.com/Don-Brownie/Don-Brownie.github.io/blob/main/Imagenes/linkedin_logo.png?raw=true" alt="LinkedIn" class="social-icon">
+                    </div>
+                        </div>
+                    </div>
+            <div class="index-boxes">
+                <div class="inner-boxes" id="data-visual">
+                    <img src="https://github.com/Don-Brownie/Don-Brownie.github.io/blob/main/Imagenes/linkedin_logo.png?raw=true" alt="data-visual" class="logo">
+                    <div class="inner-boxes-title">
+                        <h3> Titulo</h3>
+                        </div>
+                        <div class="inner-boxes-text">
+                        <p> textito lindo </p>
+                        </div>
+                    <div class="icon-holder-list" id="data-visual">
+                        <img src="https://github.com/Don-Brownie/Don-Brownie.github.io/blob/main/Imagenes/linkedin_logo.png?raw=true" alt="LinkedIn" class="social-icon">
+                    </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    
+
 <script>
     const roles = ["Data Analyst", "Data Engineer", "Project Manager", "Policy Designer", "Political Scientist"];
     let roleIndex = 0;
@@ -91,6 +124,11 @@
     }
     
     typeRole();
+
+    window.addEventListener('load', function() {
+    const photo = document.querySelector('.photo');
+    photo.classList.add('loaded');
+});
 </script>
 
 </body>
