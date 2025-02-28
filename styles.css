@@ -101,11 +101,9 @@ body {
 
 /* Photo styling */
 .photo {
-    max-width: 200px;
-    object-fit: cover;
     position: absolute;
     top: 50%;
-    right: 20%;  /* Place it on the left side */
+    right: 10%;  /* Place it on the left side */
 }
 
 /* Keyframes for caret blinking */
