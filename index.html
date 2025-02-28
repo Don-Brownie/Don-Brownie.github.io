@@ -39,54 +39,55 @@
         </div>
     </div>
     
-    <script>
-        const roles = ["Data Analyst", "Data Engineer", "Project Manager", "Policy Designer", "Political Scientist"];
-        let roleIndex = 0;
-        let currentText = '';
-        let isErasing = false;
-        let charIndex = 0;
-        const typingSpeed = 60;
-        const erasingSpeed = 60;
-        const pauseTime = 1000;
-        const roleElement = document.getElementById('role');
+<script>
+    const roles = ["Data Analyst", "Data Engineer", "Project Manager", "Policy Designer", "Political Scientist"];
+    let roleIndex = 0;
+    let currentText = '';
+    let isErasing = false;
+    let charIndex = 0;
+    const typingSpeed = 60;
+    const erasingSpeed = 60;
+    const pauseTime = 1000;
+    const roleElement = document.getElementById('role');
+    
+    function typeRole() {
+        const currentRole = roles[roleIndex];
         
-        function typeRole() {
-            const currentRole = roles[roleIndex];
-            
-            // Typing phase
-            if (!isErasing) {
-                currentText = currentRole.substring(0, charIndex);
-                charIndex++;
-            } 
-            // Erasing phase
-            else {
-                currentText = currentRole.substring(0, charIndex);
-                charIndex--;
-            }
-        
-            roleElement.textContent = currentText;
-        
-            // If typing is complete, start erasing after a delay
-            if (!isErasing && charIndex === currentRole.length) {
-                setTimeout(() => {
-                    isErasing = true;
-                }, pauseTime);
-            }
-            // If erasing is complete, move to the next role
-            else if (isErasing && charIndex === 0) {
-                roleIndex = (roleIndex + 1) % roles.length;
-                isErasing = false;
-                setTimeout(typeRole, pauseTime);
-                return;
-            }
-        
-            // Adjust speed based on whether we are typing or erasing
-            const speed = isErasing ? erasingSpeed : typingSpeed;
-            setTimeout(typeRole, speed);
+        // Typing phase
+        if (!isErasing) {
+            currentText = currentRole.substring(0, charIndex);
+            charIndex++;
+        } 
+        // Erasing phase
+        else {
+            currentText = currentRole.substring(0, charIndex);
+            charIndex--;
         }
-        
-        typeRole();
+    
+        roleElement.textContent = currentText;
+    
+        // If typing is complete, start erasing after a delay
+        if (!isErasing && charIndex === currentRole.length) {
+            setTimeout(() => {
+                isErasing = true;
+            }, pauseTime);
+        }
+        // If erasing is complete, move to the next role
+        else if (isErasing && charIndex === 0) {
+            roleIndex = (roleIndex + 1) % roles.length;
+            isErasing = false;
+            currentText = ''; // Clear text to prevent the last letter being visible
+            setTimeout(typeRole, pauseTime); // Start the typing phase for the next role
+            return;
+        }
+    
+        // Adjust speed based on whether we are typing or erasing
+        const speed = isErasing ? erasingSpeed : typingSpeed;
+        setTimeout(typeRole, speed);
+    }
+    
+    typeRole();
+</script>
 
-    </script>
 </body>
 </html>
