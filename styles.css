@@ -103,7 +103,7 @@ body {
 .photo {
     position: absolute;
     top: 50%;
-    right: 10%;  /* Place it on the left side */
+    right: 10px;  /* Place it on the left side */
 }
 
 /* Keyframes for caret blinking */
