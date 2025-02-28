@@ -103,10 +103,11 @@ body {
 .photo {
     max-width: 200px;
     border-radius: 8px;
-    object-fit: scale-down;
-    position: relative;
+    object-fit: contain; /* Adjusted from scale-down */
+    position: absolute;
     top: 50%;
-    left: 10px;  /* Place it on the left side */
+    left: 10px;
+    transform: translateY(-50%); /* Centers the image vertically */
 }
 
 /* Keyframes for caret blinking */
