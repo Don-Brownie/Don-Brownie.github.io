@@ -38,6 +38,7 @@ body {
     text-align: left;
     white-space: nowrap;
     vertical-align: middle; /* Ensure vertical alignment is also correct */
+    float: left;
 }
 
 /* New container for rotating text to prevent text movement */
