@@ -103,7 +103,7 @@ body {
 .photo {
     max-width: 200px;
     border-radius: 8px;
-    object-fit: cover;
+    object-fit: scale-down;
     position: absolute;
     top: 50%;
     left: 10px;  /* Place it on the left side */
