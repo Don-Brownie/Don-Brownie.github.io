@@ -12,10 +12,9 @@ body {
 
 /* Container for content */
 .landing-container {
-    text-align: center;
     display: flex;
-    /* justify-content: flex-start;  /* Aligns items to the start (left) */
-    /* align-items: flex-start;  /* Aligns items to the top */
+    justify-content: space-between;
+    align-items: center;
     width: 80%;
 }
 .text-content {
@@ -25,24 +24,27 @@ body {
 
 /* Left section content */
 .text-content h1 {
-    font-size: 36px;
+    font-size: 25px;
     margin: 10px 0;
     text-align: left;
 }
 
 .text-content p {
-    font-size: 20px;
+    font-size: 25px;
     margin: 10px 0;
     text-align: left;
 }
 
+.rotating-titles-full-text p {
+    font-size: 36px;
+    font-weight: bold;
+}
 /* Rotating titles container */
 .rotating-titles-full-text {
     display: inline-block;
     text-align: left;
     white-space: nowrap;
     vertical-align: middle; /* Ensure vertical alignment is also correct */
-    float: left;
 }
 
 /* New container for rotating text to prevent text movement */
@@ -65,27 +67,21 @@ body {
     text-align: left;
 }
 
-/* Links styling */
 .links {
-    margin-top: 20px;
+    display: flex;
+    align-items: top; /* Align items vertically in the center */
+    gap: 10px; /* Adds space between each element */;
 }
 
-.links a {
-    text-decoration: none;
-    margin: 0 10px;
-    font-size: 18px;
-    color: #333;
-    transition: color 0.3s;
-}
 
-.links a:hover {
-    color: #4CAF50;
+.social-icon {
+    width: 30px; /* Adjust size of the icons as needed */
+    height: 30px;
 }
 
 /* CV Button styling */
 .cv-button {
-    padding: 10px 20px;
-    margin-top: 20px;
+    padding: 6px 25px;
     font-size: 16px;
     background-color: #4CAF50;
     color: white;
@@ -99,17 +95,28 @@ body {
     background-color: #45a049;
 }
 
+.descripcion-bruno-texto p {
+    font-size: 20px;
+    padding-top: 20px;
+    padding-right: 40px;
+    text-align: justify;
+}
 /* Photo styling */
 .photo {
-    max-width: 300px;
+    max-width: 400px;
     border-radius: 8px;
     object-fit: cover;
-    left: 10px;
+    left: 5%;
 }
 
 /* Keyframes for caret blinking */
 @keyframes blinkCaret {
     50% {
+        border-color: transparent; /* Makes the caret disappear */
+    }
+}
+
+     {
         border-color: transparent; /* Makes the caret disappear */
     }
 }
