@@ -32,6 +32,12 @@ body {
     text-align:left;
 }
 
+.rotating-titles-full-text {
+    display: inline-block; /* Ensures it behaves like inline content */
+    text-align: left; /* Keeps the text aligned left */
+    white-space: nowrap; /* Prevents text wrapping */
+}
+
 /* New container for rotating text to prevent text movement */
 .rotating-container {
     display: inline-block; /* Ensures it behaves like inline content */
