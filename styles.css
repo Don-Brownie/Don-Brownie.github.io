@@ -101,9 +101,10 @@ body {
 
 /* Photo styling */
 .photo {
-    max-width: 200px;
-    border-radius: 50%;
+    max-width: 300px;
+    border-radius: 8px;
     object-fit: cover;
+    left: 10px;
 }
 
 /* Keyframes for caret blinking */
