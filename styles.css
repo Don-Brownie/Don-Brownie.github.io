@@ -54,6 +54,7 @@ body {
     border-right: 2px solid #4CAF50; /* Creates the caret effect */
     padding-right: 5px; /* Space between text and caret */
     animation: blinkCaret 0.7s step-end infinite; /* Blinking animation */
+    allign-text: left
 }
 
 /* Links styling */
