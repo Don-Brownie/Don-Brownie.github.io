@@ -36,6 +36,7 @@ body {
     display: inline-block; /* Ensures it behaves like inline content */
     text-align: left; /* Keeps the text aligned left */
     white-space: nowrap; /* Prevents text wrapping */
+    align-items: left;
 }
 
 /* New container for rotating text to prevent text movement */
@@ -43,6 +44,7 @@ body {
     display: inline-block; /* Ensures it behaves like inline content */
     text-align: left; /* Keeps the text aligned left */
     white-space: nowrap; /* Prevents text wrapping */
+    align-items: left;
 }
 
 /* Rotating titles styling */
@@ -55,6 +57,7 @@ body {
     padding-right: 5px; /* Space between text and caret */
     animation: blinkCaret 0.7s step-end infinite; /* Blinking animation */
     text-align: left;
+    align-items: left;
 }
 
 /* Links styling */
