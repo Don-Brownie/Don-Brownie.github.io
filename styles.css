@@ -23,11 +23,13 @@ body {
 .text-content h1 {
     font-size: 36px;
     margin: 10px 0;
+    text-align:left;
 }
 
 .text-content p {
     font-size: 20px;
     margin: 10px 0;
+    text-align:left;
 }
 
 /* New container for rotating text to prevent text movement */
