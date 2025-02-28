@@ -17,23 +17,30 @@
             <h1>Hi there!</h1>
             <p>I'm Bruno Malarini Elgoyhen</p>
             <div class = "rotating-titles-full-text">
-                <span>I'm a </span>
-                <span class="rotating-titles" id="role"></span>
+                <p>I'm a <span class="rotating-titles" id="role"></span></p>
             </div>
             
             <!-- Links to GitHub, LinkedIn -->
             <div class="links">
-                <a href="https://github.com/Don-Brownie" target="_blank" class="link">GitHub</a>
-                <a href="https://www.linkedin.com/in/brunomalarinielgoyhen/" target="_blank" class="link">LinkedIn</a>
-            </div>
-
-            <!-- CV download button -->
+                <a href="https://github.com/Don-Brownie" target="_blank" class="link">
+                    <img src="https://github.com/Don-Brownie/Don-Brownie.github.io/blob/main/Imagenes/github_logo.png?raw=true" alt="GitHub" class="social-icon">
+                </a>
+                <a href="https://www.linkedin.com/in/brunomalarinielgoyhen/" target="_blank" class="link">
+                    <img src="https://github.com/Don-Brownie/Don-Brownie.github.io/blob/main/Imagenes/linkedin_logo.png?raw=true" alt="LinkedIn" class="social-icon">
+                </a>
+                 <!-- CV download button -->
             <a href="Archivos/curriculum_vitae.pdf" download>
                 <button class="cv-button">Download CV</button>
             </a>
+            </div>
+            <div class = "descripcion-bruno-texto">
+                <p> Specialized in data visualization and presentation, with a passion for identifying the ideal tools to address each unique solution. Skilled in aligning stakeholder priorities and fostering collaboration. Hands-on experience in shaping technological and educational policies, as well as in DevOps, ETL processes, API integration, AWS, and SQL, ensuring seamless and efficient system operations. Also a sailor, actor, tango dancer and dog lover.
+                </p>    
         </div>
+
+            </div>
         <!-- Right side: Photo -->
-            <img src="https://github.com/Don-Brownie/Don-Brownie.github.io/blob/main/Imagenes%20/foto_perfil.jpeg?raw=true" alt="Bruno Malarini Elgoyhen" class="photo">
+            <img src="https://github.com/Don-Brownie/Don-Brownie.github.io/blob/main/Imagenes/foto_perfil.jpeg?raw=true" alt="Bruno Malarini Elgoyhen" class="photo">
     </div>
     
 <script>
@@ -57,7 +64,7 @@
         } 
         // Erasing phase
         else {
-            currentText = currentRole.substring(0, charIndex);
+            currentText = currentRole.substring(0, charIndex -1);
             charIndex--;
         }
     
