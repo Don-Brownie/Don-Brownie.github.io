@@ -71,8 +71,10 @@
         <div class="text-content">
             <h1>Hi there!</h1>
             <p>I'm Bruno Malarini Elgoyhen</p>
-            <p>Data Engineer | [Other Titles]</p>
-
+        <div>
+            <span>Current Role: </span>
+            <span class="rotating-titles" id="role"></span>
+        </div>
             <!-- Links to GitHub, LinkedIn -->
             <div>
                 <a href="https://github.com/Don-Brownie" target="_blank">GitHub</a>
@@ -90,6 +92,47 @@
             <img src="https://github.com/Don-Brownie/Don-Brownie.github.io/blob/main/Imagenes%20/foto_perfil.jpeg?raw=true" alt="Bruno Malarini Elgoyhen" class="photo">
         </div>
     </div>
+    
+  <script>
+        const roles = ["Data Engineer", "Software Developer", "Tech Enthusiast", "AI Researcher", "Web Developer"];
+        let roleIndex = 0;
+        let currentText = '';
+        let isErasing = false;
+        let charIndex = 0;
+        const typingSpeed = 150;
+        const erasingSpeed = 100;
+        const pauseTime = 1000;
+        const roleElement = document.getElementById('role');
 
+        function typeRole() {
+            const currentRole = roles[roleIndex];
+            if (isErasing) {
+                currentText = currentRole.substring(0, charIndex);
+                charIndex--;
+            } else {
+                currentText = currentRole.substring(0, charIndex);
+                charIndex++;
+            }
+
+            roleElement.textContent = currentText;
+
+            if (!isErasing && charIndex === currentRole.length) {
+                setTimeout(() => {
+                    isErasing = true;
+                }, pauseTime);
+            } else if (isErasing && charIndex === 0) {
+                roleIndex = (roleIndex + 1) % roles.length;
+                isErasing = false;
+                setTimeout(typeRole, pauseTime);
+                return;
+            }
+
+            const speed = isErasing ? erasingSpeed : typingSpeed;
+            setTimeout(typeRole, speed);
+        }
+
+        typeRole();
+    </script>
+    
 </body>
 </html>
