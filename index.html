@@ -6,49 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Bruno Malarini Elgoyhen</title>
     
-    <!-- CSS styles go here -->
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f4f4f4;
-        }
-        .container {
-            text-align: center;
-        }
-        .text-content h1 {
-            font-size: 36px;
-            margin: 10px 0;
-        }
-        .rotating-titles {
-            font-size: 32px;
-            font-weight: bold;
-            color: #4CAF50;
-            white-space: nowrap;
-            display: inline-block;
-            border-right: 2px solid #4CAF50; /* Creates the caret effect */
-            padding-right: 5px; /* Space between text and caret */
-            animation: blinkCaret 0.7s step-end infinite; /* Blinking animation */
-        }
-        .photo {
-            max-width: 200px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-top: 20px;
-        }
-
-        /* Keyframes for caret blinking */
-        @keyframes blinkCaret {
-            50% {
-                border-color: transparent; /* Makes the caret disappear */
-            }
-        }
-    </style>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -57,14 +16,15 @@
         <div class="text-content">
             <h1>Hi there!</h1>
             <p>I'm Bruno Malarini Elgoyhen</p>
-        <div>
-            <span>Current Role: </span>
-            <span class="rotating-titles" id="role"></span>
-        </div>
-            <!-- Links to GitHub, LinkedIn -->
             <div>
-                <a href="https://github.com/Don-Brownie" target="_blank">GitHub</a>
-                <a href="https://www.linkedin.com/in/brunomalarinielgoyhen/" target="_blank">LinkedIn</a>
+                <span>Current Role: </span>
+                <span class="rotating-titles" id="role"></span>
+            </div>
+            
+            <!-- Links to GitHub, LinkedIn -->
+            <div class="links">
+                <a href="https://github.com/Don-Brownie" target="_blank" class="link">GitHub</a>
+                <a href="https://www.linkedin.com/in/brunomalarinielgoyhen/" target="_blank" class="link">LinkedIn</a>
             </div>
 
             <!-- CV download button -->
@@ -79,7 +39,7 @@
         </div>
     </div>
     
-  <script>
+    <script>
         // JavaScript code remains the same
         const roles = ["Data Engineer", "Software Developer", "Tech Enthusiast", "AI Researcher", "Web Developer"];
         let roleIndex = 0;
