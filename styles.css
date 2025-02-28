@@ -1,21 +1,26 @@
+
 /* General styling for body */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
+    padding-left: 2%;
+    padding-right: 2%;
+    display: grid;
     align-items: center;
     height: 100vh;
     background-color: #f4f4f4;
+    scroll-behavior: smooth;
 }
-
 /* Container for content */
 .landing-container {
-    display: flex;
+    display: grid;  
     justify-content: space-between;
     align-items: center;
-    width: 80%;
+    padding-left:5%;
+    padding-right:5%;
+    padding-top: 1%;
+    width: 90%;
+    grid-template-columns: [col1] auto [col2] auto;
 }
 .text-content {
     text-align: left;
@@ -73,7 +78,6 @@ body {
     gap: 10px; /* Adds space between each element */;
 }
 
-
 .social-icon {
     width: 30px; /* Adjust size of the icons as needed */
     height: 30px;
@@ -90,7 +94,6 @@ body {
     border-radius: 5px;
     transition: background-color 0.3s;
 }
-
 .cv-button:hover {
     background-color: #45a049;
 }
@@ -101,12 +104,29 @@ body {
     padding-right: 40px;
     text-align: justify;
 }
-/* Photo styling */
 .photo {
-    max-width: 400px;
+    width: 400px;
+    height: 800px;
     border-radius: 8px;
     object-fit: cover;
-    left: 5%;
+    overflow: clip;
+    padding-right: 5%;
+    opacity: 0; /* Start with the image being invisible */
+    transform: translateX(100%); /* Initially position the image off-screen to the right */
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Add both transform and opacity transition */
+}
+
+/* When the page loads, apply the transition effect */
+.photo.loaded {
+    opacity: 1; /* Fade in */
+    transform: translateX(0); /* Slide into view */
+}
+
+/* When the viewport is below 349px, hide the image */
+@media (max-width: 1000px) {
+    .photo {
+        display: none;
+    }
 }
 
 /* Keyframes for caret blinking */
@@ -116,12 +136,29 @@ body {
     }
 }
 
-     {
-        border-color: transparent; /* Makes the caret disappear */
-    }
+.service-examples{
+    display: grid;
+    grid-auto-flow: column;
+    place-items: center;
+    padding-top: 5%;
 }
+.index-boxes{
+    background-color: aquamarine;
+    height: 500px;
+    width: 200px;
+    padding:5%;
 
-    50% {
-        border-color: transparent; /* Makes the caret disappear */
+}
+.inner-boxes{   
+     display: grid;
+    grid-template-rows: [row1] 40% [row2] 20% [row3] 20% [row4] 10%;
+    padding:5%;
+    height: 100%;
+    width: 100%;
     }
+
+.logo{
+    object-fit: contain;
+    height:90%;
+    align-self: center;
 }
