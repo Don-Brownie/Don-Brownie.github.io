@@ -40,7 +40,6 @@
     </div>
     
     <script>
-        // JavaScript code remains the same
         const roles = ["Data Analyst", "Data Engineer", "Project Manager", "Policy Designer", "Political Scientist"];
         let roleIndex = 0;
         let currentText = '';
@@ -53,27 +52,35 @@
         
         function typeRole() {
             const currentRole = roles[roleIndex];
-            if (isErasing) {
-                currentText = currentRole.substring(0, charIndex);
-                charIndex--;
-            } else {
+            
+            // Typing phase
+            if (!isErasing) {
                 currentText = currentRole.substring(0, charIndex);
                 charIndex++;
+            } 
+            // Erasing phase
+            else {
+                currentText = currentRole.substring(0, charIndex);
+                charIndex--;
             }
         
             roleElement.textContent = currentText;
         
+            // If typing is complete, start erasing after a delay
             if (!isErasing && charIndex === currentRole.length) {
                 setTimeout(() => {
                     isErasing = true;
                 }, pauseTime);
-            } else if (isErasing && charIndex === 0) {
+            }
+            // If erasing is complete, move to the next role
+            else if (isErasing && charIndex === 0) {
                 roleIndex = (roleIndex + 1) % roles.length;
                 isErasing = false;
                 setTimeout(typeRole, pauseTime);
                 return;
             }
         
+            // Adjust speed based on whether we are typing or erasing
             const speed = isErasing ? erasingSpeed : typingSpeed;
             setTimeout(typeRole, speed);
         }
