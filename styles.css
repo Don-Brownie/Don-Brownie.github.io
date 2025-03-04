@@ -1,15 +1,41 @@
-
+:root {
+    --blue-color: #19565e;
+    --background-color:  #f4eded;
+    --background-color-dm: #061f23;
+    --blue-color-dm:var(--background-color);
+    --text-color:black;
+    --text-color-alt:white;
+    --text-color-dm:var(--text-color-alt);
+    --text-color-alt-dm:var(--text-color);
+    pointer-events: none;
+  }
 /* General styling for body */
+* {
+    transition: background-color 0.6s, color 0.6s;
+    
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding-left: 2%;
-    padding-right: 2%;
+    font-family: "Nunito",sans-serif;
+    margin: auto;
+    height: 100%;
+    width: auto;
     display: grid;
     align-items: center;
-    height: 100vh;
-    background-color: #f4f4f4;
+    background-color:var(--background-color);
     scroll-behavior: smooth;
+    }
+
+body.dark-mode {
+    background-color: var(--background-color-dm);
+}
+a {
+    text-decoration: none;  /* Remove underline */
+    color: inherit;         /* Inherit the color from the parent */
+    font-weight: inherit;   /* Inherit the font weight */
+}
+.toggle-btn{
+    pointer-events: auto;
 }
 /* Container for content */
 .landing-container {
@@ -32,18 +58,31 @@ body {
     font-size: 25px;
     margin: 10px 0;
     text-align: left;
+    color:var(--text-color);
 }
-
+.dark-mode .text-content h1{
+    color:var(--text-color-dm);
+}
 .text-content p {
     font-size: 25px;
     margin: 10px 0;
     text-align: left;
+    color:var(--text-color);
+}
+.dark-mode .text-content p{
+    color:var(--text-color-dm);
 }
 
 .rotating-titles-full-text p {
     font-size: 36px;
     font-weight: bold;
+    color:var(--text-color);
 }
+
+.dark-mode .rotating-titles-full-text p {
+    color:var(--text-color-dm);
+}
+
 /* Rotating titles container */
 .rotating-titles-full-text {
     display: inline-block;
@@ -64,38 +103,54 @@ body {
 .rotating-titles {
     font-size: 32px;
     font-weight: bold;
-    color: #4CAF50;
+    color: var(--blue-color);
     display: inline-block;
-    border-right: 2px solid #4CAF50; /* Creates the caret effect */
+    border-right: 2px solid var(--blue-color); /* Creates the caret effect */
     padding-right: 5px; /* Space between text and caret */
     animation: blinkCaret 0.7s step-end infinite; /* Blinking animation */
     text-align: left;
+}
+.dark-mode .rotating-titles {
+    color: var(--text-color-alt);
+    border-right: 2px solid var(--text-color-alt);
 }
 
 .links {
     display: flex;
     align-items: top; /* Align items vertically in the center */
     gap: 10px; /* Adds space between each element */;
+    pointer-events: auto;
 }
 
 .social-icon {
     width: 30px; /* Adjust size of the icons as needed */
     height: 30px;
+    filter: saturate(150) grayscale(1) contrast(10);
+    mix-blend-mode: multiply;
+    pointer-events: auto;
 }
 
+.dark-mode .social-icon {
+    filter: brightness(0) invert(1);
+    mix-blend-mode: normal;
+}
 /* CV Button styling */
+
 .cv-button {
     padding: 6px 25px;
     font-size: 16px;
-    background-color: #4CAF50;
-    color: white;
+    background-color:var(--blue-color);
+    color: var(--text-color-dm);
     border: none;
     cursor: pointer;
     border-radius: 5px;
-    transition: background-color 0.3s;
+    pointer-events: auto;
 }
-.cv-button:hover {
-    background-color: #45a049;
+
+
+.dark-mode .cv-button {
+    background-color:var(--blue-color-dm);
+    color: var(--text-color-alt-dm);
 }
 
 .descripcion-bruno-texto p {
@@ -105,7 +160,6 @@ body {
     text-align: justify;
 }
 .photo {
-    width: 400px;
     height: 800px;
     border-radius: 8px;
     object-fit: cover;
@@ -135,30 +189,126 @@ body {
         border-color: transparent; /* Makes the caret disappear */
     }
 }
-
+.service-examples-title {
+    padding-top: 5%;
+    margin: auto;
+    color: var(--text-color)
+}
+.dark-mode .service-examples-title {
+    color: var(--text-color-dm)
+}
 .service-examples{
     display: grid;
     grid-auto-flow: column;
     place-items: center;
-    padding-top: 5%;
+    padding-top: 10%;
 }
 .index-boxes{
-    background-color: aquamarine;
+    background-color: var(--blue-color);
     height: 500px;
     width: 200px;
     padding:5%;
-
+    object-fit: contain;
+    transition: 0.5s;
+    border-radius: 8px;
+    color:var(--text-color-alt);
+    pointer-events: auto;
 }
+.dark-mode .index-boxes {
+    background-color: var(--blue-color-dm);
+    color: var(--text-color-alt-dm);
+}
+
+.index-boxes:hover{
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px 0 var(--blue-color);
+}
+.dark-mode .index-boxes:hover{
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px 0 var(--blue-color-dm);
+}
+
 .inner-boxes{   
      display: grid;
-    grid-template-rows: [row1] 40% [row2] 20% [row3] 20% [row4] 10%;
-    padding:5%;
+    grid-template-rows: [row1] 50% [row2] 20% [row3] 20% [row4] 10%;
     height: 100%;
     width: 100%;
+    object-fit: contain;
     }
 
 .logo{
-    object-fit: contain;
-    height:90%;
+    object-fit: scale-down;
+    width: 100%;
+    height:100%;
     align-self: center;
 }
+
+.framework-icon{
+    width: 30px; /* Adjust size of the icons as needed */
+    height: 30px;
+    filter: brightness(0) invert(1);
+    justify-self: center;
+}
+
+.dark-mode .framework-icon{
+    filter: saturate(150) grayscale(1) contrast(10);
+    mix-blend-mode: multiply;
+}
+
+.framework-icon#skills{
+    width: 60px; /* Adjust size of the icons as needed */
+    height: 60px;
+    border:solid;
+    border-radius: 7px;
+    pointer-events: auto;
+    transition:0.5s;
+}
+
+.framework-icon#skills:hover{
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px 0 var(--blue-color-dm);
+}
+
+.icon-holder-list{
+    align-items: center;
+    background-color: var(--blue-color);
+    justify-self: center;
+    justify-content: center;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+    grid-auto-rows: minmax(70px, auto);
+}
+.icon-holder-list#skills{
+    padding: 10px;
+    border-radius: 8px;
+    width: 80vw;
+}
+.dark-mode .icon-holder-list{
+    background-color: var(--blue-color-dm);
+}
+
+.image-and-description{
+    display: grid;
+    font-size: 10px;
+}
+
+.wrapper {
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    perspective: 10px;
+    align-items: center;
+    display: grid;
+}
+
+#particles-js {
+    position: fixed;
+    left: -50%;
+    width: 200%;
+    height:500%;
+    z-index: -1;
+    pointer-events:auto;
+    transform: translateZ(-10px);
+    /* This ensures that interactions are passed through to elements below */
+  } /* ---- stats.js ---- */
