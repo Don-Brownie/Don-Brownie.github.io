@@ -10,11 +10,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
     <!-- Link to external CSS file -->
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="legder_scrollbar_styles.css">
 </head>
 <body>
+    <div class="sidebar">
+        <img src = "https://github.com/Don-Brownie/Don-Brownie.github.io/blob/main/Imagenes/icons8-python-240.png?raw=true" alt="arrow" id="sidebar-arrow">
+        <div class ="sidebar-content">
+        <div class="icon-holder-grid">
+    </div>
+    <div>
+        <input type="checkbox" class="checkbox" id="checkbox">
+        <label for="checkbox" class="checkbox-label">
+            <img src = "https://github.com/Don-Brownie/Don-Brownie.github.io/blob/main/Imagenes/icons8-python-240.png?raw=true" class= "dark-mode-astros" alt= "moon" id="moon">
+            <img src = "https://github.com/Don-Brownie/Don-Brownie.github.io/blob/main/Imagenes/icons8-python-240.png?raw=true" class= "dark-mode-astros" alt= "sun" id="sun">
+          <span class="ball"></span>
+        </label>
+      </div>
+        <p>Here is your ledger content!</p>
+      </div>
+    </div>
     <div class="wrapper", id="background">
     <div id="particles-js"></div>
-    <button class="toggle-btn" onclick="toggleMode()">Toggle Dark Mode</button>
     <div class="landing-container">
         <!-- Left side: Text content -->
         <div class="text-content">
@@ -47,23 +63,82 @@
     <div class ="service-examples-title">
         <h1> Things I fiddle with</h1>
     </div> 
-        <div class = "icon-holder-list" id="skills">
+        <div class = "icon-holder-grid" id="skills">
             <div class ="image-and-description" id="skills">
-            <img src="https://github.com/Don-Brownie/Don-Brownie.github.io/blob/main/Imagenes/python-logo.png?raw=true" alt="Python" class="framework-icon" id="skills">
-            <h1>Title</h1>
+            <img src="https://github.com/Don-Brownie/Don-Brownie.github.io/blob/main/Imagenes/icons8-python-240.png?raw=true" alt="Python" class="framework-icon" id="skills">
+            <p>Python</p>
         </div>
-            <img src="https://github.com/Don-Brownie/Don-Brownie.github.io/blob/main/Imagenes/PostgresSQL_logo.png?raw=true" alt="PostgreSQL" class="framework-icon"id="skills">
-            <img src="https://github.com/Don-Brownie/Don-Brownie.github.io/blob/main/Imagenes/aws_logo.png?raw=true" alt="Amazon Web Services" class="framework-icon"id="skills">
-            <img src="https://github.com/Don-Brownie/Don-Brownie.github.io/blob/main/Imagenes/python-logo.png?raw=true" alt="Python" class="framework-icon" id="skills">
-            <img src="https://github.com/Don-Brownie/Don-Brownie.github.io/blob/main/Imagenes/PostgresSQL_logo.png?raw=true" alt="PostgreSQL" class="framework-icon"id="skills">
-            <img src="https://github.com/Don-Brownie/Don-Brownie.github.io/blob/main/Imagenes/aws_logo.png?raw=true" alt="Amazon Web Services" class="framework-icon"id="skills">
-            <img src="https://github.com/Don-Brownie/Don-Brownie.github.io/blob/main/Imagenes/python-logo.png?raw=true" alt="Python" class="framework-icon" id="skills">
-            <img src="https://github.com/Don-Brownie/Don-Brownie.github.io/blob/main/Imagenes/PostgresSQL_logo.png?raw=true" alt="PostgreSQL" class="framework-icon"id="skills">
-            <img src="https://github.com/Don-Brownie/Don-Brownie.github.io/blob/main/Imagenes/aws_logo.png?raw=true" alt="Amazon Web Services" class="framework-icon"id="skills">
-            <img src="https://github.com/Don-Brownie/Don-Brownie.github.io/blob/main/Imagenes/aws_logo.png?raw=true" alt="Amazon Web Services" class="framework-icon"id="skills">
-            <img src="https://github.com/Don-Brownie/Don-Brownie.github.io/blob/main/Imagenes/python-logo.png?raw=true" alt="Python" class="framework-icon" id="skills">
-            <img src="https://github.com/Don-Brownie/Don-Brownie.github.io/blob/main/Imagenes/PostgresSQL_logo.png?raw=true" alt="PostgreSQL" class="framework-icon"id="skills">
-            <img src="https://github.com/Don-Brownie/Don-Brownie.github.io/blob/main/Imagenes/aws_logo.png?raw=true" alt="Amazon Web Services" class="framework-icon"id="skills">
+        <div class ="image-and-description" id="skills">
+            <img src="https://github.com/Don-Brownie/Don-Brownie.github.io/blob/main/Imagenes/icons8-pytorch-240.png?raw=true" alt="PyTorch" class="framework-icon" id="skills">
+            <p>PyTorch</p>
+        </div>
+        <div class ="image-and-description" id="skills">
+            <img src="https://github.com/Don-Brownie/Don-Brownie.github.io/blob/main/Imagenes/icons8-abrazando-cara-app-240.png?raw=true" alt="HuggingFace" class="framework-icon" id="skills">
+            <p>HuggingFace</p>
+        </div>
+        <div class ="image-and-description" id="skills">
+            <img src="https://github.com/Don-Brownie/Don-Brownie.github.io/blob/main/Imagenes/fastai.png?raw=true" alt="fast.ai" class="framework-icon" id="skills">
+            <p>fast.ai</p>
+        </div>
+        <div class ="image-and-description" id="skills">
+            <img src="https://github.com/Don-Brownie/Don-Brownie.github.io/blob/main/Imagenes/icons8-pandas-240.png?raw=true" alt="Pandas" class="framework-icon"id="skills">
+            <p>Pandas</p>
+        </div>
+        <div class ="image-and-description" id="skills">
+            <img src="https://github.com/Don-Brownie/Don-Brownie.github.io/blob/main/Imagenes/icons8-jupyter-240.png?raw=true" alt="Project Jupyter" class="framework-icon"id="skills">
+            <p>Jupyter</p>
+        </div>
+        <div class ="image-and-description" id="skills">
+            <img src="https://raw.githubusercontent.com/Don-Brownie/Don-Brownie.github.io/1d416da792bcdf65f5799bc22d08c3d3e2815fe0/Imagenes/ic_looker_studio.svg" alt="Looker Studio" class="framework-icon"id="skills">
+            <p>Looker S.</p>
+        </div>
+        <div class ="image-and-description" id="skills">
+            <img src="https://github.com/Don-Brownie/Don-Brownie.github.io/blob/main/Imagenes/icons8-power-bi-240.png?raw=true" alt="Power BI" class="framework-icon"id="skills">
+            <p>Power BI</p>
+        </div>
+        <div class ="image-and-description" id="skills">
+            <img src="https://github.com/Don-Brownie/Don-Brownie.github.io/blob/main/Imagenes/Apache%20Airflow.png?raw=true" alt="Apache Airflow" class="framework-icon"id="skills">
+            <p>Airflow</p>
+        </div>
+        <div class ="image-and-description" id="skills">
+            <img src="https://github.com/Don-Brownie/Don-Brownie.github.io/blob/main/Imagenes/PostgreSQL.png?raw=true" alt="PostgreSQL" class="framework-icon"id="skills">
+            <p>PostgreSQL</p>
+        </div>
+        <div class ="image-and-description" id="skills">
+            <img src="https://github.com/Don-Brownie/Don-Brownie.github.io/blob/main/Imagenes/icons8-aws-240.png?raw=true" alt="Amazon Web Services" class="framework-icon"id="skills">
+            <p>AWS</p>
+        </div>
+        <div class ="image-and-description" id="skills">
+            <img src="https://github.com/Don-Brownie/Don-Brownie.github.io/blob/main/Imagenes/icons8-html-240.png?raw=true" alt="HTML" class="framework-icon"id="skills">
+            <p>HTML</p>
+        </div>
+        <div class ="image-and-description" id="skills">
+            <img src="https://github.com/Don-Brownie/Don-Brownie.github.io/blob/main/Imagenes/icons8-css-240.png?raw=true" alt="CSS" class="framework-icon"id="skills">
+            <p>CSS</p>
+        </div>
+        <div class ="image-and-description" id="skills">
+            <img src="https://github.com/Don-Brownie/Don-Brownie.github.io/blob/main/Imagenes/icons8-javascript-240.png?raw=true" alt="JavaScript" class="framework-icon"id="skills">
+            <p>JavaScript</p>
+        </div>
+        <div class ="image-and-description" id="skills">
+            <img src="https://raw.githubusercontent.com/Don-Brownie/Don-Brownie.github.io/bc9d1b763aea43d04d294702d3d5a57075cd590c/Imagenes/Google_Apps_Script.svg" alt="Google Apps Script"  class="framework-icon"id="skills">
+            <p>Apps Script</p>
+        </div>
+        <div class ="image-and-description" id="skills">
+            <img src="https://github.com/Don-Brownie/Don-Brownie.github.io/blob/main/Imagenes/256px-Photopea_logo.svg.png?raw=true" alt="Photopea" class="framework-icon"id="skills">
+            <p>Photopea</p>
+        </div>
+        <div class ="image-and-description" id="skills">
+            <img src="https://github.com/Don-Brownie/Don-Brownie.github.io/blob/main/Imagenes/256px-Linux_mascot_tux.png?raw=true" alt="Linux" class="framework-icon"id="skills">
+            <p>Linux</p>
+        </div>
+        <div class ="image-and-description" id="skills">
+            <img src="https://github.com/Don-Brownie/Don-Brownie.github.io/blob/main/Imagenes/github_logo.png?raw=true" alt="GitHub" class="framework-icon"id="skills">
+            <p>GitHub</p>
+        </div>
+
+
+
     </div>
     <div class ="service-examples-title">
         <h1> Might I interest you in</h1>
@@ -110,8 +185,8 @@
 </ul>
 </body>
 </div>
-<script src="particles.min.js"></script> <!-- stats.js lib -->
-<script src="particles.js"></script>
-<script src="script.js"></script>
+<script src="C:\Users\bmala\Downloads\particles.min.js"></script> <!-- stats.js lib -->
+<script src="C:\Users\bmala\Downloads\particles.js"></script>
+<script src="C:\Users\bmala\Downloads\script.js"></script>
   </script>
 </html>
