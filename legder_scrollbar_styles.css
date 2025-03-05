@@ -58,10 +58,17 @@
     padding-right: 5px;
 }
 
-img#sidebar-arrow{
+p#arrow{
     object-fit: cover;
     width: 100%;
     place-self: center;
+    font-weight: bold;
+    font-size: 100%;
+    padding-left: 10px;
+    color:coral;
+}
+.dark-mode p#arrow {
+  color: lightblue;
 }
 .checkbox {
     opacity: 0;
@@ -69,7 +76,7 @@ img#sidebar-arrow{
   }
   
   .checkbox-label {
-    background-color: #111;
+    background-color: white;
     width: 100px;
     height: 20px;
     border-radius: 50px;
@@ -81,23 +88,40 @@ img#sidebar-arrow{
     align-items: center;
     justify-self:center;
   }
+  .dark-mode .checkbox-label{
+    background-color: #111;
+  }
   
   .dark-mode-astros{
-    height: 100%;
-    width: 100;
-    object-fit: cover;}
+    font-size: 100%;
+    justify-self: center;
+    object-fit: cover;
+    padding-left: 1px;
+    padding-right: 1px;
+}
+.dark-mode-astros#sun{
+  color:gold;
+}
   
   .checkbox-label .ball {
-    background-color: #fff;
+    background-color:coral;
     width: 24px;
     height: 24px;
     position: absolute;
     left: 2px;
-    top: 2px;
+    top: 3px;
     border-radius: 50%;
     transition: transform 0.2s linear;
   }
+  .dark-mode .checkbox-label .ball{
+    background-color:  #fff;
+  }
   
   .checkbox:checked + .checkbox-label .ball {
-    transform: translateX(220%);
+    transform: translateX(80px);
+  }
+  
+  .sidebar-content{
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
