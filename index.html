@@ -30,12 +30,29 @@
           <span class="ball"></span>
         </label>
       </div>
-        <p>Here is your ledger content!</p>
-      </div>
+      <div class = sidebar-redirections>
+      <a href="#landing-container"> Landing</a>
+      <a href="#stack-section">Tech Stack</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#my-timeline">Education</a>
+    </div>
+      <div class="links" id = "sidebar-links">
+        <a href="https://github.com/Don-Brownie" target="_blank" class="link">
+            <img src="https://github.com/Don-Brownie/Don-Brownie.github.io/blob/main/Imagenes/github_logo.png?raw=true" alt="GitHub" class="social-icon">
+        </a>
+        <a href="https://www.linkedin.com/in/brunomalarinielgoyhen/" target="_blank" class="link">
+            <img src="https://github.com/Don-Brownie/Don-Brownie.github.io/blob/main/Imagenes/linkedin_logo.png?raw=true" alt="LinkedIn" class="social-icon">
+        </a>
+        <!-- CV download button -->
+        <a href="Archivos/curriculum_vitae.pdf" download>
+            <img src="https://raw.githubusercontent.com/Don-Brownie/Don-Brownie.github.io/aac3d463e935e7403a66a7b0ba65329dd644c017/Imagenes/square-cv.svg" alt="curriculum_vitae" class="social-icon">
+        </a>
+    </div>
+</div>
     </div>
     <div class="wrapper", id="background">
     <div id="particles-js"></div>
-    <div class="landing-container">
+    <div class="landing-container"id = landing-container>
         <!-- Left side: Text content -->
         <div class="text-content">
             <h1>Hi there!</h1>
@@ -64,7 +81,7 @@
         <!-- Right side: Photo -->
         <img src="https://github.com/Don-Brownie/Don-Brownie.github.io/blob/main/Imagenes/foto_perfil_con_borde.png?raw=true" alt="Bruno Malarini Elgoyhen" class="photo">
     </div>
-    <div class ="service-examples-title">
+    <div class ="service-examples-title" id="stack-section">
         <h1> Things I fiddle with</h1>
     </div> 
         <div class = "icon-holder-grid" id="skills">
@@ -144,7 +161,7 @@
 
 
     </div>
-    <div class ="service-examples-title">
+    <div class ="service-examples-title" id ="portfolio">
         <h1> Might I interest you in</h1>
     </div>
         <!-- Service Example Box -->
@@ -181,7 +198,27 @@
                         </div>
                     </a>
                     </div>
+                    <div class="index-boxes">
+                        <a href="AI in Practice.html">
+                        <div class="inner-boxes" id="mlops">
+                            <img src="https://github.com/Don-Brownie/Don-Brownie.github.io/blob/main/Imagenes/foto_perfil.jpeg?raw=true" alt="data-visual" class="logo">
+                            <div class="inner-boxes-title">
+                                <h3> AI in Practice</h3>
+                                </div>
+                                <div class="inner-boxes-text">
+                                <p> textito lindo </p>
+                                </div>
+                            <div class="icon-holder-list" id="mlops">
+                                <img src="https://github.com/Don-Brownie/Don-Brownie.github.io/blob/main/Imagenes/linkedin_logo.png?raw=true" alt="LinkedIn" class="framework-icon">
+                            </div>
+                                </div>
+                            </a>
+                            </div>
                 </div>
+                <div class ="service-examples-title" id = my-timeline>
+                    <h1> My Journey </h1>
+                </div>
+                    <div class="service-examples">
                 <div class="timeline-container">
                     <div class="inner-timeline-container">
                     <div class="timeline-item">
@@ -219,6 +256,54 @@
                 <div class="timeline-bar">
                 </div>
                 </div>
+                <div class="timeline-container">
+                    <div class="inner-timeline-container">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3 id="UTDT">Torcuato di Tella</h3>
+                          <h3 id="titulo-descripcion">Master in Management and Analytics</h3>
+                            <p>Description of the event that took place.</p>
+                            <span class="date">March 2025</span>
+                        </div>
+                        <div class="ball">
+                            <img src="https://github.com/Don-Brownie/Don-Brownie.github.io/blob/main/Imagenes/ditella.jpg?raw=true" alt="Event 1">
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Event 2</h3>
+                            <p>Description of the event that took place.</p>
+                            <span class="date">February 2025</span>
+                        </div>
+                        <div class="ball">
+                            <img src="https://github.com/Don-Brownie/Don-Brownie.github.io/blob/main/Imagenes/ditella.jpg?raw=true" alt="Event 2">
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3 id="UTDT">Torcuato di Tella</h3>
+                          <h3 id="titulo-descripcion">Master in Management and Analytics</h3>
+                            <p>Description of the event that took place.</p>
+                            <span class="date">March 2025</span>
+                        </div>
+                        <div class="ball">
+                            <img src="https://github.com/Don-Brownie/Don-Brownie.github.io/blob/main/Imagenes/ditella.jpg?raw=true" alt="Event 1">
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Event 4</h3>
+                            <p>Description of the event that took place.</p>
+                            <span class="date">January 2025</span>
+                        </div>
+                        <div class="ball">
+                            <img src="https://github.com/Don-Brownie/Don-Brownie.github.io/blob/main/Imagenes/scms.png?raw=true" alt="Event 4">
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-bar">
+                </div>
+                </div>
             </div>
         </div>
     </div>
@@ -226,8 +311,9 @@
 </ul>
 </body>
 </div>
-<script src="particles.min.js"></script> <!-- stats.js lib -->
-<script src="particles.js"></script>
-<script src="script.js"></script>
+<script src="C:\Users\bmala\Downloads\particles.min.js"></script> <!-- stats.js lib -->
+<script src="C:\Users\bmala\Downloads\particles.js"></script>
+<script src="C:\Users\bmala\Downloads\script.js"></script>
   </script>
 </html>
+
