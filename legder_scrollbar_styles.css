@@ -125,3 +125,9 @@ p#arrow{
     padding-top: 15px;
     padding-bottom: 15px;
   }
+
+  .sidebar-redirections{
+    display: grid;
+    justify-content: left;
+    padding: 15px;
+  }
