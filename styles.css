@@ -128,6 +128,13 @@ a {
     gap: 10px; /* Adds space between each element */;
     pointer-events: auto;
 }
+#sidebar-links.links{
+    width: 86%;
+    position: absolute;
+    bottom: 0;
+    justify-content: center;
+    overflow: hidden;
+}
 
 .social-icon {
     width: 30px; /* Adjust size of the icons as needed */
@@ -214,8 +221,8 @@ a {
     color: var(--text-color-dm)
 }
 .service-examples{
-    display: grid;
-    grid-auto-flow: column;
+    display: flex;
+    flex-wrap: wrap;
     place-items: center;
     padding-top: 10%;
     pointer-events: none;
