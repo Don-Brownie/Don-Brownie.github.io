@@ -23,6 +23,7 @@ body {
     align-items: center;
     background-color:var(--background-color);
     scroll-behavior: smooth;
+    text-align: center;
     }
 
 body.dark-mode {
@@ -128,13 +129,6 @@ a {
     gap: 10px; /* Adds space between each element */;
     pointer-events: auto;
 }
-#sidebar-links.links{
-    width: 86%;
-    position: absolute;
-    bottom: 0;
-    justify-content: center;
-    overflow: hidden;
-}
 
 .social-icon {
     width: 30px; /* Adjust size of the icons as needed */
@@ -224,14 +218,16 @@ a {
     display: flex;
     flex-wrap: wrap;
     place-items: center;
-    padding-top: 10%;
+    padding: 10%;
     pointer-events: none;
+    justify-content: space-evenly;
+    gap:7px;
 }
 .index-boxes{
     background-color: var(--blue-color);
     height: 500px;
-    width: 200px;
-    padding:5%;
+    width: 240px;
+    padding:3%;
     object-fit: contain;
     transition: 0.5s;
     border-radius: 8px;
@@ -244,18 +240,24 @@ a {
 }
 
 .index-boxes:hover{
-    transform: scale(1.05);
+    transform: scale(1.013);
     filter: brightness(120%);
 }
 
 .inner-boxes{   
      display: grid;
-    grid-template-rows: [row1] 50% [row2] 20% [row3] 20% [row4] 10%;
+    grid-template-rows: [row1] 60% [row2] 10% [row3] 20% [row4] 10%;
     height: 100%;
     width: 100%;
     object-fit: contain;
+    align-items: center;
+    text-align: center;
     }
 
+.inner-boxes-title{   
+     font-size: 22px;
+     justify-content:end;
+    }
 .logo{
     object-fit: scale-down;
     width: 100%;
@@ -264,8 +266,8 @@ a {
 }
 
 .framework-icon{
-    width: 30px; /* Adjust size of the icons as needed */
-    height: 30px;
+    width: 40px; /* Adjust size of the icons as needed */
+    height: 40px;
     justify-self: center;
 }
 
@@ -276,7 +278,6 @@ a {
 
 .icon-holder-grid{
     display: flex;
-        max-width: 60rem;
         flex-wrap: wrap;
         place-content: center;
         gap: .4rem;
@@ -286,6 +287,9 @@ a {
     padding: 10px;
     border-radius: 8px;
     width: 80vw;
+}
+.icon-holder-list{
+    align-items: flex-end;
 }
 
 .image-and-description{
@@ -422,4 +426,69 @@ a {
 }
 .dark-mode .timeline-bar{
     border-right: solid 7px var(--blue-color-dm);
+}
+
+.jupyter-iframe{
+    width:99%;
+    height:90vh;
+    border-color: var(--blue-color);
+    border-width:5px;
+}
+.dark-mode .jupyter-iframe {
+        border-color: var(--blue-color-dm);
+    }
+
+ .inner-body{
+    width:95%;
+    padding:1%;
+    align-items: flex-start;
+}
+.dark-mode .inner-body#inner-body-ml{
+    color:var(--text-color-alt);
+}
+gradio-app .gradio-container {
+    background-color: transparent !important;
+    font-family:inherit !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+}
+gradio-app .gradio-container h1 {
+    font-size: 25px !important;
+}
+
+.dark-mode gradio-app .gradio-container-5-21-0 .prose *  {
+    color: var(--background-color) !important;
+}
+
+header {
+    position: fixed; /* Makes the header stay on top */
+    top: 0; /* Position it at the top of the page */
+    left: 0; /* Aligns it to the left */
+    width: 100%; /* Takes full width of the page */
+    background-color: #333; /* Dark background color */
+    color: white; /* Text color */
+    text-align: center; /* Center align text */
+    height:10vh;
+    display: grid;
+    grid-template-columns: [col1] 25% [col2] 25%  [col3] 25% [col4] 25%;
+    align-items: center;
+}
+
+.wrapper#outer-wrapper{
+    height: 90vh;
+    bottom: 0;
+    position: fixed;
+}
+.wrapper#background-ml{
+    height: 100%;
+}
+.header-links{
+    height: 100%;
+    display:grid;
+    grid-template-columns: [col1] 20% [col2] auto;
+    overflow:hidden;
+    padding-left: 20%;
+    padding-right: 20%;
+    font-size: 2vh;
+    align-items: center;
 }
