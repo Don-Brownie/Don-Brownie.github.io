@@ -5,18 +5,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>AI in Practice</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="legder_scrollbar_styles.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>About Us</h1>
-    <p>This is the second page, where you can provide information about your website or company.</p>
+    <header>
+        <div class="header-links">
+            <img src="https://github.com/Don-Brownie/Don-Brownie.github.io/blob/main/Imagenes/mlp_image.png?raw=true" alt="mlp" class="logo">
+            <a href="Data Visualization.html"><h3>Data Visualization</h3></a>
+        </div>
+        <div class="header-links">
+            <img src="https://github.com/Don-Brownie/Don-Brownie.github.io/blob/main/Imagenes/mlp_image.png?raw=true" alt="mlp" class="logo">
+            <a href="Machine Learning.html"><h3>Machine Learning</h3></a>
+        </div>
+        <div class="header-links">
+            <img src="https://github.com/Don-Brownie/Don-Brownie.github.io/blob/main/Imagenes/pencil_drawing.png?raw=true" alt="ai-pencil" class="logo">
+            <h3>AI in Practice</h3>
+        </div>
+        <div class="header-links">
+            <img src="https://github.com/Don-Brownie/Don-Brownie.github.io/blob/main/Imagenes/mlp_image.png?raw=true" alt="mlp" class="logo">
+            <a href="index.html"><h3>Home</h3></a>
+        </div>
+    </header>
+    <div class="wrapper" id="outer-wrapper">
+    <div class="sidebar">
+        <p id="arrow">
+            ◀
+        </p>
+        <div class ="sidebar-content">
+            <div>
+        <input type="checkbox" class="checkbox" id="checkbox">
+        <label for="checkbox" class="checkbox-label">
+            <p class= "dark-mode-astros" alt= "moon" id="moon">
+                ⏾
+            </p>
+            <p class= "dark-mode-astros" alt= "sun" id="sun">
+                ☀
+            </p>
+          <span class="ball"></span>
+        </label>
+      </div>
+      <div class = sidebar-redirections>
+      <a href="#ml-title-unstructured"> Images ML</a>
+      <a href="#ml-title-structured">Height ML</a>
+      <a href="index.html">Back Home</a>
 
-    <!-- Link back to the home page -->
-    <a href="index.html">Go back to Home Page</a>
+    </div>
+      <div class="links" id = "sidebar-links">
+        <a href="https://github.com/Don-Brownie" target="_blank" class="link">
+            <img src="https://github.com/Don-Brownie/Don-Brownie.github.io/blob/main/Imagenes/github_logo.png?raw=true" alt="GitHub" class="social-icon">
+        </a>
+        <a href="https://www.linkedin.com/in/brunomalarinielgoyhen/" target="_blank" class="link">
+            <img src="https://github.com/Don-Brownie/Don-Brownie.github.io/blob/main/Imagenes/linkedin_logo.png?raw=true" alt="LinkedIn" class="social-icon">
+        </a>
+        <!-- CV download button -->
+        <a href="Archivos/curriculum_vitae.pdf" download>
+            <img src="https://raw.githubusercontent.com/Don-Brownie/Don-Brownie.github.io/aac3d463e935e7403a66a7b0ba65329dd644c017/Imagenes/square-cv.svg" alt="curriculum_vitae" class="social-icon">
+        </a>
+    </div>
+</div>
+    </div>
+    <div class="wrapper" id="background-ml">
+        <div class="inner-body" id="inner-body-ml">
+    <h1>AI in Practice</h1>
+    <p>To try out the four models trained on the previous module, you can test them by interacting with the different tasks they perform. For the number classifier, you’ll need to draw a number between 0 and 9, and the models will classify it accordingly. Since the number classifiers have limited output possibilities (0 to 9), it will generate a table showing how "sure" the models are of their classification for each number. The table will have a row for each digit (from 0 to 9), and the values in each row will represent the model's confidence in predicting that particular number. For the height predictor, you’ll need to input the necessary values. After entering the required information, the model will output two predictions for your height, providing two distinct estimations based on the two models. This allows you to compare the predictions and see the variations between them. As the model pairs where trained on the exact same data, you only need to input once to get two outputs.</p>
     <script
 	type="module"
 	src="https://gradio.s3-us-west-2.amazonaws.com/5.21.0/gradio.js"
 ></script>
-
-<gradio-app src="https://don-brownie-mldemo.hf.space"></gradio-app>
+<gradio-app src="https://don-brownie-mldemo.hf.space" id="gradio-image"></gradio-app>
+    <script
+	type="module"
+	src="https://gradio.s3-us-west-2.amazonaws.com/5.23.1/gradio.js"
+></script>
+<gradio-app src="https://don-brownie-galton-height-prediction.hf.space" id="gradio-height"></gradio-app>
+</div>
+</div>
+</div>
 </body>
+<script src="C:\Users\bmala\Downloads\script.js"></script>
 </html>
