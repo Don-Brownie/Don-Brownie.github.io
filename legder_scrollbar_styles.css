@@ -35,7 +35,7 @@
 
 .sidebar {
     width: 20px;
-    height: 100vh;
+    height: 100%;
     background-color:var(--ledger-background-color);
     color: white;
     position: fixed;
@@ -43,7 +43,7 @@
     border-bottom-left-radius: 10px ;
     right: var(--scrollbar-width); /* Start hidden on the right */
     transition: 0.3s;
-    z-index: 1;
+    z-index: 2;
     overflow: hidden;
     display: grid;
     grid-template-columns: [col1]20px [col2] auto;
@@ -121,6 +121,7 @@ p#arrow{
     transform: translateX(80px);
   }
   
+  
   .sidebar-content{
     padding-top: 15px;
     padding-bottom: 15px;
@@ -131,3 +132,10 @@ p#arrow{
     justify-content: left;
     padding: 15px;
   }
+  #sidebar-links.links{
+    width: 86%;
+    position: absolute;
+    bottom: 0;
+    justify-content: center;
+    overflow: hidden;
+}
