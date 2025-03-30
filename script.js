@@ -1,3 +1,39 @@
+fetch('https://raw.githubusercontent.com/Don-Brownie/Don-Brownie.github.io/main/sidebar.html')
+.then(response => response.text())
+.then(html => {
+  const sidebarLoadingElement = document.getElementById('sidebar-loading');
+  if (sidebarLoadingElement) {
+    sidebarLoadingElement.innerHTML = html;
+  }
+
+  // Now that sidebar HTML is loaded, handle the dark mode toggle logic
+  const checkbox = document.getElementById("checkbox");
+  if (checkbox) {
+    const storedMode = localStorage.getItem('mode');
+    
+    // Apply dark mode if stored mode is 'dark' and check the checkbox
+    if (storedMode === 'dark') {
+        document.body.classList.add('dark-mode');
+        checkbox.checked = true;
+    }
+
+    // Function to toggle between light and dark modes and store the preference
+    function toggleMode() {
+        document.body.classList.toggle('dark-mode');
+        if (document.body.classList.contains('dark-mode')) {
+            localStorage.setItem('mode', 'dark');
+        } else {
+            localStorage.setItem('mode', 'light');
+        }
+    }
+
+    // Add event listener to the checkbox
+    checkbox.addEventListener('change', toggleMode);
+  }
+
+})
+.catch(err => console.log('Error loading HTML:', err));
+
 const roles = ["Data Analyst", "Data Engineer", "Project Manager", "Policy Designer", "Political Scientist"];
 let roleIndex = 0;
 let currentText = '';
@@ -51,31 +87,15 @@ if (roleElement) {
 }
 
 window.addEventListener('load', function() {
-const photo = document.querySelector('.photo');
-photo.classList.add('loaded');
-})
-0
-const storedMode = localStorage.getItem('mode');
-const checkbox = document.getElementById("checkbox");
+  const photo = document.querySelector('.photo');
+  if (photo) {
+    photo.classList.add('loaded');
+  }
+});
 
-// Apply dark mode if stored mode is 'dark' and check the checkbox
-if (storedMode === 'dark') {
-    document.body.classList.add('dark-mode');
-    checkbox.checked = true; // Make sure the checkbox is checked
-}
-
-// Function to toggle between light and dark modes and store the preference
-function toggleMode() {
-    // Toggle dark mode on body
-    document.body.classList.toggle('dark-mode');
-
-    // Save the current mode in localStorage
-    if (document.body.classList.contains('dark-mode')) {
-        localStorage.setItem('mode', 'dark');
-    } else {
-        localStorage.setItem('mode', 'light');
+function toggleDeployable(deployableId) {
+    const deployableOptions = document.querySelector(`#${deployableId}`);
+    if (deployableOptions) {
+        deployableOptions.classList.toggle('visible');
     }
 }
-
-// Add event listener to the checkbox
-checkbox.addEventListener('change', toggleMode);
