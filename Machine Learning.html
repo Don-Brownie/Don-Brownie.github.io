@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>AI in Practice</title>
+    <title>Machine Learning</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
@@ -12,25 +12,22 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-        <div id='sidebar-loading'>
-        </div>
+    <div id='sidebar-loading'>
+    </div>
     <div class="wrapper" id="background">
         <div class="inner-body" id="inner-body-ml">
-    <h1>AI in Practice</h1>
-    <p>To try out the four models trained on the previous module, you can test them by interacting with the different tasks they perform. For the number classifier, you’ll need to draw a number between 0 and 9, and the models will classify it accordingly. Since the number classifiers have limited output possibilities (0 to 9), it will generate a table showing how "sure" the models are of their classification for each number. The table will have a row for each digit (from 0 to 9), and the values in each row will represent the model's confidence in predicting that particular number. For the height predictor, you’ll need to input the necessary values. After entering the required information, the model will output two predictions for your height, providing two distinct estimations based on the two models. This allows you to compare the predictions and see the variations between them. As the model pairs where trained on the exact same data, you only need to input once to get two outputs.</p>
-    <script
-	type="module"
-	src="https://gradio.s3-us-west-2.amazonaws.com/5.21.0/gradio.js"
-></script>
-<gradio-app src="https://don-brownie-mldemo.hf.space" id="gradio-image"></gradio-app>
-    <script
-	type="module"
-	src="https://gradio.s3-us-west-2.amazonaws.com/5.23.1/gradio.js"
-></script>
-<gradio-app src="https://don-brownie-galton-height-prediction.hf.space" id="gradio-height"></gradio-app>
+    <h1>Machine Learning</h1>
+    <p>The following code demonstrates two distinct end-to-end machine learning pipelines, designed to handle different types of data: structured data (tabular) and unstructured data (images). Each pipeline addresses the respective problem with two models: a classic machine learning model (Random Forest) and a deep learning model (CNN for images and MLP for tabular data). The goal is to preprocess, train, and export models for both data types, providing a comprehensive approach for handling diverse machine learning tasks. In the next module you can try these models yourself!</p>
+    <div class= "ml-title" id= "ml-title-unstructured">
+    <h2>Understanding Images with Machine Learning</h2>
+</div>
+    <iframe src="https://nbviewer.org/github/Don-Brownie/Don-Brownie.github.io/blob/main/Machine%20Learning/unstructured_dataset_model.ipynb" class = "jupyter-iframe" id="unstructured_iframe" ></iframe>
+    <div class= "ml-title" id= "ml-title-structured">   
+    <h2>Predicting height with Machine Learning</h2>
+</div>
+    <iframe src="https://nbviewer.org/github/Don-Brownie/Don-Brownie.github.io/blob/main/Machine%20Learning/unstructured_dataset_model.ipynb" class = "jupyter-iframe" id="structured_iframe" ></iframe>
 </div>
 </div>
 </body>
 <script src="C:\Users\bmala\Downloads\script.js"></script>
 </html>
-
