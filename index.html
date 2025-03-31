@@ -293,9 +293,34 @@
 </ul>
 </body>
 </div>
-<script src="particles.min.js"></script> <!-- stats.js lib -->
-<script src="particles.js"></script>
-<script src="script.js"></script>
+<script>
+    // Function to detect aspect ratio and load scripts accordingly
+    function loadScriptsBasedOnAspectRatio() {
+        const aspectRatio = window.innerWidth / window.innerHeight;
+        
+        // Check if aspect ratio meets your condition (e.g., 16:9 or greater)
+        if (aspectRatio >= 1 && window.innerWidth > 999) { // For 16:9 aspect ratio (width > height)
+            // Load the scripts if the condition is met
+            loadScript("particles.min.js");
+            loadScript("particles.js");
+        }
+        // Else: Don't load particles scripts
+    }
+
+    // Function to dynamically load a script
+    function loadScript(src) {
+        const script = document.createElement("script");
+        script.src = src;
+        script.type = "text/javascript";
+        script.async = true;
+        document.head.appendChild(script);
+    }
+    // Run the function to check aspect ratio and load scripts
+    loadScriptsBasedOnAspectRatio();
+
+    // Load your script.js regardless of aspect ratio
+    loadScript("script.js");
+</script>
 </html>
 
 
