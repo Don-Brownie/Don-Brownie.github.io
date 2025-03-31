@@ -3,8 +3,25 @@
     --scrollbar-width: 10px;
     --ledger-background-color:rgb(236, 192, 175);
     --ledger-background-color-dm:rgb(71, 93, 93);
-
 }
+
+@media screen and (max-width: 999px), 
+       screen and (max-aspect-ratio: 1/1) {
+  body {
+    overflow: hidden; /* Hide scrollbar */
+  }
+  ::-webkit-scrollbar {
+    display: none;
+  } 
+  .sidebar{
+    right: 0 !important;
+    width:0 !important;
+  }
+  button#sidebar-shower{
+    height:20px;
+  }
+}
+
 ::-webkit-scrollbar {
     width: var(--scrollbar-width);
     background-color: var(--ledger-background-color);
@@ -211,7 +228,22 @@ button#sidebar-button{
   transition: 0s;
 }
 
+button#sidebar-shower{
+  background-color: inherit;
+  border: 0px;
+}
+button:hover{
+  filter:brightness(120%)
+}
+
 button#sidebar-button img{
   filter: brightness(1000%) contrast(1000%);
 }
 
+button#sidebar-shower img{
+  filter: brightness(1000%) contrast(1000%);
+}
+
+.sidebar.visible{
+  width:180px !important;
+}
