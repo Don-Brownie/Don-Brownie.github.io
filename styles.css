@@ -35,6 +35,10 @@ a {
     font-weight: inherit;   /* Inherit the font weight */
 }
 
+p {
+    margin:0px;
+}
+
 .wrapper {
     height: 100vh;
     overflow-y: auto;
@@ -417,8 +421,7 @@ a {
     text-align: right;
 }
 .header{
-    display: grid
-;
+    display: grid;
     grid-template-columns: [col1] auto [col2] auto;
 }
 .timeline-bar {
@@ -461,34 +464,28 @@ gradio-app .gradio-container h1 {
 }
 
 header {
-    position: fixed; /* Makes the header stay on top */
+    position: sticky; /* Makes the header stay on top */
     top: 0; /* Position it at the top of the page */
     left: 0; /* Aligns it to the left */
     width: 100%; /* Takes full width of the page */
-    background-color: #333; /* Dark background color */
+    background-color: coral; /* Dark background color */
     color: white; /* Text color */
     text-align: center; /* Center align text */
-    height:10vh;
-    display: grid;
-    grid-template-columns: [col1] 25% [col2] 25%  [col3] 25% [col4] 25%;
+    height:min(10vh,50px);
+    display: none;
+    z-index:10;
     align-items: center;
+    grid-template-columns: [col1] 70% [col2] 15%;
+    padding-left: 15%;
+}
+.dark-mode header{
+    background-color: var(--background-color-dm);
+    filter: contrast(80%) brightness(110%)
 }
 
-.wrapper#outer-wrapper{
-    height: 90vh;
-    bottom: 0;
-    position: fixed;
-}
-.wrapper#background-ml{
-    height: 100%;
-}
-.header-links{
-    height: 100%;
-    display:grid;
-    grid-template-columns: [col1] 20% [col2] auto;
-    overflow:hidden;
-    padding-left: 20%;
-    padding-right: 20%;
-    font-size: 2vh;
-    align-items: center;
+@media screen and (max-width: 999px), 
+       screen and (max-aspect-ratio: 1/1) {
+  header{
+    display: grid;
+  }
 }
