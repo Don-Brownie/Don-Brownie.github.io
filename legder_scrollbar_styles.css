@@ -16,6 +16,7 @@
   .sidebar{
     right: 0 !important;
     width:0 !important;
+    padding: 0 !important;
   }
   button#sidebar-shower{
     height:20px;
@@ -79,10 +80,8 @@ p#arrow{
     object-fit: cover;
     width: 100%;
     place-self: center;
-    font-weight: bold;
-    font-size: 100%;
-    padding-left: 10px;
-    color:coral;
+    padding-left: 2px;
+
 }
 .dark-mode p#arrow {
   color: lightblue;
@@ -110,11 +109,10 @@ p#arrow{
   }
   
   .dark-mode-astros{
-    font-size: 100%;
-    justify-self: center;
-    object-fit: cover;
-    padding-left: 1px;
-    padding-right: 1px;
+    padding-top: 3px;
+}
+.dark-mode-astros#moon{
+  filter: brightness(1000%) contrast(1000%);
 }
 .dark-mode-astros#sun{
   color:gold;
@@ -231,9 +229,7 @@ button#sidebar-button{
 button#sidebar-shower{
   background-color: inherit;
   border: 0px;
-}
-button:hover{
-  filter:brightness(120%)
+  transition: 0s;
 }
 
 button#sidebar-button img{
@@ -242,6 +238,11 @@ button#sidebar-button img{
 
 button#sidebar-shower img{
   filter: brightness(1000%) contrast(1000%);
+}
+
+.sidebar.visible{
+  width:180px !important;
+  padding-right: 15px !important;
 }
 
 .sidebar.visible{
