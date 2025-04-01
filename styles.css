@@ -10,7 +10,7 @@
   }
 /* General styling for body */
 * {
-    transition: background-color 0.6s, color 0.6s;
+    transition: background-color 0.6s;
     
 }
 
@@ -222,10 +222,21 @@ p {
     display: flex;
     flex-wrap: wrap;
     place-items: center;
-    padding: 10%;
+    padding-right: 10%;
+    padding-left: 10%;
     pointer-events: none;
     justify-content: space-evenly;
     gap:7px;
+}
+.service-examples-inner-title{
+    display: flex;
+    place-items: center;
+    pointer-events: none;
+    flex-direction: column;
+    width: 45%;
+}
+.dark-mode .service-examples-inner-title h1{
+    color: var(--text-color-dm);
 }
 .index-boxes{
     background-color: var(--blue-color);
@@ -337,7 +348,7 @@ p {
 
   .timeline-container {
     position: relative;
-    min-width: 45%;
+    width: 100%;
     margin: 0 auto;
     padding: 10px;
     padding-right: 40px;
@@ -369,6 +380,7 @@ p {
 
 .timeline-content {
     background: #fff;
+    filter: opacity(0.85);
     padding: 15px;
     border-radius: 6px;
     position: relative;
@@ -488,4 +500,28 @@ header {
   header{
     display: grid;
   }
+  .descripcion-bruno-texto p {
+    padding-right: 0;
+  }
+  .rotating-titles{
+    font-size:28px;
+  }
+  .rotating-titles-full-text p {
+    font-size: 28px;
+  }
+  .icon-holder-grid#skills {
+    width: 95%;
+  }
+.inner-boxes{   
+   grid-template-rows: [row1] 0% [row2] 20% [row3] 60% [row4] 20%;
 }
+.index-boxes{
+    height: 200px;
+}
+.service-examples {
+    padding: 2%;
+}
+.service-examples-inner-title {
+    width: 100%;
+}
+       }
