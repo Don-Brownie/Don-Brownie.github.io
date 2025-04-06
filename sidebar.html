@@ -1,4 +1,4 @@
-   <div class="sidebar" id="main-sidebar">
+ <div class="sidebar" id="main-sidebar">
         <button id= "sidebar-shower" onclick="toggleDeployable('main-sidebar')">
             <img src ="https://raw.githubusercontent.com/Don-Brownie/Don-Brownie.github.io/d890917d8dfc9b725db92595f86d03ec58fcdd4d/Imagenes/menu_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg">
         </button>
@@ -36,11 +36,26 @@
         </div>
     
         <div class="deployable-options" id = "deployable-main">
-            <a href="Data Visualization.html">
-                <div class="sidebar-redirections-indent-1">
-                    <p>Data Visualization</p>
+            <div class="sidebar-redirections-indent-1">
+                <a href="Data-Visualization.html">
+                        <p>Dashboards</p>
+                    </a>
+                    <button id= "sidebar-button" onclick="toggleDeployable('deployable-dv')">
+                        <img src ="https://raw.githubusercontent.com/Don-Brownie/Don-Brownie.github.io/76a0d5b151037fc04b06fd65da277a5bf3990b73/Imagenes/keyboard_arrow_down_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg">
+                    </button>
                 </div>
-            </a>
+                <div class="deployable-options" id="deployable-dv">
+                    <a href="Data Visualization.html#height-dashboard">
+                        <div class="sidebar-redirections-indent-2">
+                            <p>Height Dashboard</p>
+                        </div>
+                    </a>
+                    <a href="Data Visualization.html#number-dashboard">
+                        <div class="sidebar-redirections-indent-2">
+                            <p>Number Dashboard</p>
+                        </div>
+                    </a>
+                </div>
             <div class="sidebar-redirections-indent-1">
             <a href="Machine Learning.html">
                     <p>M. Learning</p>
