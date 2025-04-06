@@ -40,7 +40,7 @@ p {
 }
 
 .wrapper {
-    height: 100vh;
+    height: 100dvh;
     overflow-y: auto;
     overflow-x: hidden;
     perspective: 10px;
@@ -445,7 +445,7 @@ p {
 
 .jupyter-iframe{
     width:99%;
-    height:90vh;
+    height:90dvh;
     border-color: var(--blue-color);
     border-width:5px;
 }
@@ -483,7 +483,7 @@ header {
     background-color: coral; /* Dark background color */
     color: white; /* Text color */
     text-align: center; /* Center align text */
-    height:min(10vh,50px);
+    height:min(10dvh,50px);
     display: none;
     z-index:10;
     align-items: center;
@@ -493,6 +493,14 @@ header {
 .dark-mode header{
     background-color: var(--background-color-dm);
     filter: contrast(80%) brightness(110%)
+}
+iframe#unstructured-visualization{
+    width: 80vw;
+    height: 90vh;
+    padding-left:10vw;
+    padding-right:10vw;
+    padding-top:1vw;
+    padding-bottom:1vw;
 }
 
 @media screen and (max-width: 999px), 
@@ -524,4 +532,12 @@ header {
 .service-examples-inner-title {
     width: 100%;
 }
+gradio-app .column.gap.svelte-vt1mxs{
+    width:93vw !important;
+    }
+iframe#unstructured-visualization{
+    width: 98vw;
+    height: 85vh;
+    padding:1vw;
+    }
        }
