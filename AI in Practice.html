@@ -22,18 +22,24 @@
                     <img src ="https://raw.githubusercontent.com/Don-Brownie/Don-Brownie.github.io/d890917d8dfc9b725db92595f86d03ec58fcdd4d/Imagenes/menu_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg">
                 </button>
             </header>
+            <div class = "container-module">
     <h1>AI in Practice</h1>
     <p>To try out the four models trained on the previous module, you can test them by interacting with the different tasks they perform. For the number classifier, you’ll need to draw a number between 0 and 9, and the models will classify it accordingly. Since the number classifiers have limited output possibilities (0 to 9), it will generate a table showing how "sure" the models are of their classification for each number. The table will have a row for each digit (from 0 to 9), and the values in each row will represent the model's confidence in predicting that particular number. For the height predictor, you’ll need to input the necessary values. After entering the required information, the model will output two predictions for your height, providing two distinct estimations based on the two models. This allows you to compare the predictions and see the variations between them. As the model pairs where trained on the exact same data, you only need to input once to get two outputs.</p>
+    </div>
+    <div class = "container-module">
     <script
 	type="module"
 	src="https://gradio.s3-us-west-2.amazonaws.com/5.21.0/gradio.js"
 ></script>
 <gradio-app src="https://don-brownie-mldemo.hf.space" id="gradio-image"></gradio-app>
+</div>
+<div class = "container-module">
     <script
 	type="module"
 	src="https://gradio.s3-us-west-2.amazonaws.com/5.23.1/gradio.js"
 ></script>
 <gradio-app src="https://don-brownie-galton-height-prediction.hf.space" id="gradio-height"></gradio-app>
+</div>
 </div>
 </div>
 </body>
