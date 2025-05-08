@@ -1,4 +1,4 @@
-fetch('https://raw.githubusercontent.com/Don-Brownie/Don-Brownie.github.io/main/sidebar.html')
+fetch('sidebar.html')
 .then(response => response.text())
 .then(html => {
   const sidebarLoadingElement = document.getElementById('sidebar-loading');
